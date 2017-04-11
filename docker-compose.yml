@@ -1,3 +1,12 @@
+db:
+  image: mysql:5.5
+
+  environment:
+   - MYSQL_ROOT_PASSWORD=admin
+
+
 prestashop:
-    image: prestashop/prestashop
+    image: prestashop/prestashop    
     
+    links:
+     - db:db
